@@ -125,7 +125,7 @@ clouds (kubernetes connectivity) on Jenkins.
 
 ### Create a Jenkins Pipeline
 
-Creata a sample Jenkins pipeline using the `Jenkinsfile.some-job` jenkinsfile.
+Creata a sample Jenkins pipeline using the `Jenkinsfile.sample` jenkinsfile.
 and build the job. A new "builder" pod will be created in the cluster which contains a docker
 container and a jenkins/inbound-agent container. The builder pod will be terminated once the 
 pipeline has run.
