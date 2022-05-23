@@ -2,6 +2,12 @@
 
 _Works on Apple Silicon_
 
+* [Setup](#setup)
+* [Deploy Kubernetes Manifests](#deploy-kubernetes-manifests)
+* [Configure Jenkins](#configure-jenkins)
+* [Configure ]
+* [Data Persistence](#data-persistence)
+
 ### Setup 
 
 1. Create a Docker context 
@@ -83,6 +89,38 @@ http://localhost:32039
 > It may also be found at: /var/jenkins_home/secrets/initialAdminPassword
 
 ![](resources/images/jenkins-ui.png)
+
+
+### Configure Kubernetes 
+
+Install the [Kubernetes Plugin](https://plugins.jenkins.io/kubernetes/) and restart Jenkins. 
+The running docker container (jenkins/jenkins) will automatically exit and restart. 
+![](resources/images/kubernetes-plugin.png)
+
+1. Get cluster info 
+```shell
+kubectl cluster-info
+
+> 'Kubernetes control plane is running at https://kubernetes.docker.internal:6443'
+> 'CoreDNS is running at https://kubernetes.docker.internal:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy' 
+```
+2. Get the Jenkins IP from the pod:
+```shell
+kubectl describe pod <pod-name> 
+```
+![](resources/images/pod-ip.png)
+
+Jenkins is running on `http://10.1.0.99:8080` inside the cluster. The pod IP is used to configure 
+clouds (kubernetes connectivity) on Jenkins.
+
+1. Navigate to Configure Clouds on Jenkins and add the `~/.kube/config` as a credential (secret file)
+
+![](resources/images/configure-clouds-cred.png)
+
+2. Configure Cloud 
+
+![](resources/images/configure-cloud.png)
+
 
 ### Data Persistence 
 
