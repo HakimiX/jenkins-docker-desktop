@@ -130,7 +130,12 @@ and build the job. A new "builder" pod will be created in the cluster which cont
 container and a jenkins/inbound-agent container. The builder pod will be terminated once the 
 pipeline has run.
 
+![](resources/images/sample-pipeline.png)
+
+The builder Pod running:
 ![](resources/images/builder-pod.png)
+
+The two containers inside the builder pod:
 ![](resources/images/builder-pod-containers.png)
 
 ### Data Persistence 
