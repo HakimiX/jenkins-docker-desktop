@@ -6,6 +6,7 @@ _Works on Apple Silicon_
 * [Deploy Kubernetes Manifests](#deploy-kubernetes-manifests)
 * [Configure Jenkins](#configure-jenkins)
 * [Configure Cloud](#configure-cloud)
+* [Create a Jenkins Pipeline](#create-a-jenkins-pipeline)
 * [Data Persistence](#data-persistence)
 
 ### Setup 
@@ -120,6 +121,9 @@ clouds (kubernetes connectivity) on Jenkins.
 2. Configure Cloud 
 
 ![](resources/images/configure-cloud.png)
+
+
+### Create a Jenkins Pipeline
 
 
 ### Data Persistence 
