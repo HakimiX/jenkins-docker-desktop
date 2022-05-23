@@ -61,6 +61,29 @@ kubectl apply -f ./kubernetes
 ```
 ![](resources/images/all-resources.png)
 
+
+### Configure Jenkins
+
+Jenkins is accessible at:
+```shell
+http://localhost:<service-port>
+```
+Get the service port: 
+```shell
+kubectl get service
+
+NAME      TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)                                       AGE
+jenkins   NodePort   10.104.192.221   <none>        8080:32039/TCP,50000:31020/TCP,80:32317/TCP   18m
+```
+Navigate to:
+```shell
+http://localhost:32039
+```
+> The initial Jenkins admin user password is outputted in the pod logs. <br>
+> It may also be found at: /var/jenkins_home/secrets/initialAdminPassword
+
+![](resources/images/jenkins-ui.png)
+
 ### Data Persistence 
 
 The Jenkins data is stored using a _PersistenceVolume_ (PV), which is a piece of storage in the cluster that 
