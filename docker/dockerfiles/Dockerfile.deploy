@@ -13,12 +13,8 @@ WORKDIR /app
 RUN wget https://get.helm.sh/helm-v3.6.2-linux-amd64.tar.gz
 RUN tar -xvf ./helm-v3.6.2-linux-amd64.tar.gz
 RUN ln -s /app/linux-amd64/helm /usr/bin/helm3
-COPY home /root/
-RUN ln -s /root/.nvm/versions/node/v16.13.2/bin/node /usr/bin/node ;\
-ln -s /root/.nvm/versions/node/v16.13.2/bin/npm /usr/bin/npm ;
 
-ENV BRANCH=NOT_SET
-ENV PROJECTS=NOT_SET
+COPY home /root/
 
 WORKDIR /root/scripts
 ENTRYPOINT ["sh", "entrypoint.sh"]
