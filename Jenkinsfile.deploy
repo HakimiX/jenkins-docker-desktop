@@ -24,7 +24,7 @@ podTemplate(label: 'builder',
 
             stage('Run') {
               container('docker') {
-                sh 'docker run -e BRANCH=$BRANCH -e PROJECTS=$PROJECTS -e ENV=$ENV -v /var/run/docker.sock:/var/run/docker.sock -t --rm cicd-deploy-pipeline:latest'
+                sh 'docker run -e BRANCH=$BRANCH -e PROJECTS=$PROJECTS -e ENV=$ENV -v /var/run/docker.sock:/var/run/docker.sock -t --rm deploy-pipeline:latest'
               }
             }
         }
