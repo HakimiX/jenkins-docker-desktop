@@ -18,7 +18,7 @@ podTemplate(label: 'builder',
 
             stage('Build'){
               container('docker') {
-                sh 'docker build -f ./docker/dockerfiles/Dockerfile.deploy -t deploy-pipeline:latest docker/dockerfiles
+                sh 'docker build -f ./docker/dockerfiles/Dockerfile.deploy -t deploy-pipeline:latest docker/
               }
             }
 
