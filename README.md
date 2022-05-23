@@ -5,7 +5,7 @@ _Works on Apple Silicon_
 * [Setup](#setup)
 * [Deploy Kubernetes Manifests](#deploy-kubernetes-manifests)
 * [Configure Jenkins](#configure-jenkins)
-* [Configure ]
+* [Configure Cloud](#configure-cloud)
 * [Data Persistence](#data-persistence)
 
 ### Setup 
@@ -91,7 +91,7 @@ http://localhost:32039
 ![](resources/images/jenkins-ui.png)
 
 
-### Configure Kubernetes 
+### Configure Cloud 
 
 Install the [Kubernetes Plugin](https://plugins.jenkins.io/kubernetes/) and restart Jenkins. 
 The running docker container (jenkins/jenkins) will automatically exit and restart. 
