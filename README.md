@@ -1,5 +1,7 @@
 # Jenkins on Kubernetes using Docker Desktop
 
+_Works on Apple Silicon_
+
 ### Setup 
 
 1. Create a Docker context 
@@ -58,3 +60,14 @@ kubectl apply -f ./kubernetes
 > 'service/jenkins created'
 ```
 ![](resources/images/all-resources.png)
+
+### Data Persistence 
+
+The Jenkins data is stored using a _PersistenceVolume_ (PV), which is a piece of storage in the cluster that 
+has been provisioned using a storage class. It is a resource in the cluster just like a node is a cluster
+resource. A _PersistenceVolumeClaim_ (PVC) is used to consume the PV resources. Claims can request a specific 
+size and access modes (e.g., they can be mounted ReadWriteOnce, ReadOnlyMany or ReadWriteManny).
+
+The Jenkins data is accessible inside the Docker container - in the `/var/jenkins_home` directory. 
+
+![](resources/images/jenkins-docker-container.png)
