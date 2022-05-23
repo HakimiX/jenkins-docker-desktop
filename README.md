@@ -44,3 +44,16 @@ kubens jenkins
 
 > 'Active namespace is "jenkins"'
 ```
+
+3. Apply the Kubernetes manifests 
+```shell
+kubectl apply -f ./kubernetes
+
+> 'deployment.apps/jenkins created'
+> 'persistentvolume/jenkins created'
+> 'persistentvolumeclaim/jenkins-claim created'
+> 'serviceaccount/jenkins created'
+> 'clusterrole.rbac.authorization.k8s.io/jenkins created'
+> 'rolebinding.rbac.authorization.k8s.io/jenkins created'
+> 'service/jenkins created'
+```
