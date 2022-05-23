@@ -57,4 +57,4 @@ kubectl apply -f ./kubernetes
 > 'rolebinding.rbac.authorization.k8s.io/jenkins created'
 > 'service/jenkins created'
 ```
-[](resources/images/all-resources.png)
+![](resources/images/all-resources.png)
