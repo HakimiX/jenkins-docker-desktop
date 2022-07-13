@@ -139,8 +139,7 @@ clouds (kubernetes connectivity) on Jenkins.
 ### Configure Seed Job 
 
 The seed job is a normal Jenkins job that run the job DSL script _(jobs/jobs.groovy)_; in turn, 
-the script contains instructions that create additional jobs. In short, the seed job is a job that created 
-more jobs. 
+the script contains instructions that create additional jobs. In short, the seed job is a job that creates more jobs. 
 > The [Job-DSL plugin](https://plugins.jenkins.io/job-dsl/) is required. 
 
 1. Create a Jenkins job and configure the Source Code Management section. 
