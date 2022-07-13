@@ -7,6 +7,7 @@ _Works on Apple Silicon_
 * [Configure Jenkins](#configure-jenkins)
 * [Configure Cloud](#configure-cloud)
 * [Configure Github connectivity](#configure-github-connectivity)
+* [Configure Seed Job](#configure-seed-job)
 * [Create a Jenkins Pipeline](#create-a-jenkins-pipeline)
 * [Data Persistence](#data-persistence)
 
@@ -133,6 +134,17 @@ clouds (kubernetes connectivity) on Jenkins.
 2. Create a new Jenkins credential with Github username and Personel access token. 
 
 ![](resources/images/github-access-token-jenkins.png)
+
+
+### Configure Seed Job 
+
+The seed job is a normal Jenkins job that run the job DSL script _(jobs/jobs.groovy)_; in turn, 
+the script contains instructions that create additional jobs. In short, the seed job is a job that created 
+more jobs. 
+> The [Job-DSL plugin](https://plugins.jenkins.io/job-dsl/) is required. 
+
+
+
 
 ### Create a Jenkins Pipeline
 
