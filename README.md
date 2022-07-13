@@ -6,6 +6,7 @@ _Works on Apple Silicon_
 * [Deploy Kubernetes Manifests](#deploy-kubernetes-manifests)
 * [Configure Jenkins](#configure-jenkins)
 * [Configure Cloud](#configure-cloud)
+* [Configure Github connectivity](#configure-github-connectivity)
 * [Create a Jenkins Pipeline](#create-a-jenkins-pipeline)
 * [Data Persistence](#data-persistence)
 
@@ -122,6 +123,16 @@ clouds (kubernetes connectivity) on Jenkins.
 
 ![](resources/images/configure-cloud.png)
 
+
+### Configure Github Connectivity
+
+1. Navigate to Github Developer Settings and generate a new Personel access token. 
+
+![](resources/images/github-access-token.png)
+
+2. Create a new Jenkins credential with Github username and Personel access token. 
+
+![](resources/images/github-access-token-jenkins.png)
 
 ### Create a Jenkins Pipeline
 
