@@ -143,8 +143,22 @@ the script contains instructions that create additional jobs. In short, the seed
 more jobs. 
 > The [Job-DSL plugin](https://plugins.jenkins.io/job-dsl/) is required. 
 
+1. Create a Jenkins job and configure the Source Code Management section. 
 
+![](resources/images/jenkins-seed-job/job-seed-git.png)
 
+2. Configure the Build step _(process Job DSLs)_ to use the `jobs/jobs.groovy` DSL script. 
+
+![](resources/images/jenkins-seed-job/job-seed-build.png)
+
+:warning: Save and build, but the job fails because you need to approve the DSL script.
+
+3. Navigate to Manage Jenkins -> In-process Script Approval and Approve the DSL script. 
+
+![](resources/images/jenkins-seed-job/job-seed-approval.png)
+
+Run the seed job again and it should build successfully. Any pipeline definitions in the 
+`jobs/jobs.groovy` DSL script will also be created. 
 
 ### Create a Jenkins Pipeline
 
